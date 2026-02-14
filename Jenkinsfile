@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "Ajith7353/webpract"
+        DOCKER_IMAGE = "ajith7353/webpract"
         IMAGE_TAG = "latest"
         KUBECONFIG = "/home/ajith/.kube/config"
     }
