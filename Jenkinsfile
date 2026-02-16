@@ -32,6 +32,18 @@ pipeline {
                 }
             }
         }
+        stage('Debug Workspace') {
+    steps {
+        sh '''
+        echo "Current Directory:"
+        pwd
+        echo "Files:"
+        ls -la
+        echo "Inside k8s folder:"
+        ls -la k8s || echo "k8s folder not found"
+        '''
+    }
+}
 
         stage('Deploy to Kubernetes') {
             steps {
