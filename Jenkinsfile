@@ -32,25 +32,13 @@ pipeline {
                 }
             }
         }
-        stage('Debug Workspace') {
-    steps {
-        sh '''
-        echo "Current Directory:"
-        pwd
-        echo "Files:"
-        ls -la
-        echo "Inside k8s folder:"
-        ls -la k8s || echo "k8s folder not found"
-        '''
-    }
-}
 
         stage('Deploy to Kubernetes') {
             steps {
                 sh '''
-                kubectl apply -f k8s/deployment.yaml
-                kubectl apply -f k8s/service.yaml
-                kubectl apply -f k8s/hpa.yaml
+                kubectl apply -f deployment.yaml
+                kubectl apply -f service.yaml
+                kubectl apply -f hpa.yaml
                 '''
             }
         }
