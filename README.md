@@ -32,15 +32,6 @@ Developer Push → Jenkins Pipeline → Docker Build
         ↓
    Horizontal Pod Autoscaler
 
-📁 Project Structure
-.
-├── Dockerfile
-├── Jenkinsfile
-├── deployment.yaml
-├── service.yaml
-├── hpa.yaml
-├── index.html
-└── images/
 
 ⚙️ Prerequisites
 
