@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: webapp-container
-          image: yourdockerhubusername/webapp:latest
+          image: ajith7353/webapk:latest
           ports:
             - containerPort: 80
