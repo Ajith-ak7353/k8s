@@ -4,8 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "ajith7353/webpract"
         IMAGE_TAG = "latest"
-        KUBECONFIG = "/home/ajith/.kube/config"
-    }
+            }
 
     stages {
 
@@ -47,7 +46,6 @@ pipeline {
         stage('Verify Deployment') {
             steps {
                 sh '''
-                export KUBECONFIG=/home/ajith/.kube/config
                 kubectl get pods
                 kubectl get svc
                 kubectl get hpa
